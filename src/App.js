@@ -87,7 +87,7 @@ this.setState({
 
     this.setState({ imageUrl: this.state.input })
 
-    fetch('http://localhost:3000/imageUrl' , {
+    fetch('https://immense-depths-26922.herokuapp.com/imageUrl' , {
               method : 'post',
               headers : {'content-type' : 'application/json'} ,
               body : JSON.stringify({
@@ -96,7 +96,7 @@ this.setState({
               )
               .then(response => response.json())
       .then(response =>  {
-             fetch('http://localhost:3000/image' , {
+             fetch('https://immense-depths-26922.herokuapp.com/image' , {
               method : 'put',
               headers : {'content-type' : 'application/json'} ,
               body : JSON.stringify({
